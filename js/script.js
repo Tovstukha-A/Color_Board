@@ -26,7 +26,7 @@ timeList.addEventListener("click", (event) => {
 });
 
 board.addEventListener("click", event => {
-    if(event.target.classList.contains("circle")) {
+    if (event.target.classList.contains("circle")) {
         score++;
         event.target.remove();
         createCircle();
@@ -66,7 +66,7 @@ function finishTime() {
 function createCircle() {
     const circle = document.createElement("div");
     const sizeCircle = getRandomCircle(10, 70);
-    const {width, height} = board.getBoundingClientRect();
+    const { width, height } = board.getBoundingClientRect();
     const x = getRandomCircle(0, width - sizeCircle);
     const y = getRandomCircle(0, height - sizeCircle);
     let colorCircle = (`rgb(${getRandomCircle(0, 255)},${getRandomCircle(0, 255)},${getRandomCircle(0, 255)})`);
